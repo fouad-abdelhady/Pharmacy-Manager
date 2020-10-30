@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3B49E69-9485-413A-B55E-A55BB5623CFC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pharmay0._0._2</RootNamespace>
+    <AssemblyName>Pharmay0.0.2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>medicine_icon-icons.com_66070.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CompaniesMedsOrder.cs" />
+    <Compile Include="Classes\Company.cs" />
+    <Compile Include="Classes\Customers.cs" />
+    <Compile Include="Classes\InventoryC.cs" />
+    <Compile Include="Classes\MedAndOrder.cs" />
+    <Compile Include="Classes\MedDetailsInShipment.cs" />
+    <Compile Include="Classes\Medicine.cs" />
+    <Compile Include="Classes\OldMed.cs" />
+    <Compile Include="Classes\Orders.cs" />
+    <Compile Include="Classes\Organizer.cs" />
+    <Compile Include="Classes\ProductData.cs" />
+    <Compile Include="Classes\Shipments.cs" />
+    <Compile Include="Classes\SoldMeds.cs" />
+    <Compile Include="Database\ClassesDatabaseOperations\CompaniesOperations.cs" />
+    <Compile Include="Database\ClassesDatabaseOperations\CustomersOperations.cs" />
+    <Compile Include="Database\ClassesDatabaseOperations\MedicienOperations.cs" />
+    <Compile Include="Database\ClassesDatabaseOperations\OrdersOperations.cs" />
+    <Compile Include="Database\ClassesDatabaseOperations\ShipmentsDatabaseOperations.cs" />
+    <Compile Include="Database\DatabaseManager.cs" />
+    <Compile Include="Database\DatabaseOperations.cs" />
+    <Compile Include="Database\DatabaseVars.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Activation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Activation.Designer.cs">
+      <DependentUpon>Activation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\AddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\AddNewCustomer.Designer.cs">
+      <DependentUpon>AddNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\AdvanceOrderViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\AdvanceOrderViewer.Designer.cs">
+      <DependentUpon>AdvanceOrderViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\Companies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\Companies.Designer.cs">
+      <DependentUpon>Companies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\CustomerR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\CustomerR.Designer.cs">
+      <DependentUpon>CustomerR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\CustomersOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\CustomersOrders.Designer.cs">
+      <DependentUpon>CustomersOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\DeleteOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\DeleteOrder.Designer.cs">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\NewShipmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\NewShipmentForm.Designer.cs">
+      <DependentUpon>NewShipmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\Oeders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\Oeders.Designer.cs">
+      <DependentUpon>Oeders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\ShipmentConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\ShipmentConfirmation.Designer.cs">
+      <DependentUpon>ShipmentConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\ShipmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\ShipmentsForm.Designer.cs">
+      <DependentUpon>ShipmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\SoldMedsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\SoldMedsReport.Designer.cs">
+      <DependentUpon>SoldMedsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\SupplierProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\SupplierProfile.Designer.cs">
+      <DependentUpon>SupplierProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Suppliers\UpdateMeds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Suppliers\UpdateMeds.Designer.cs">
+      <DependentUpon>UpdateMeds.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Activation.resx">
+      <DependentUpon>Activation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\AddNewCustomer.resx">
+      <DependentUpon>AddNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\AdvanceOrderViewer.resx">
+      <DependentUpon>AdvanceOrderViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\Companies.resx">
+      <DependentUpon>Companies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\CustomerR.resx">
+      <DependentUpon>CustomerR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\CustomersOrders.resx">
+      <DependentUpon>CustomersOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\DeleteOrder.resx">
+      <DependentUpon>DeleteOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\NewShipmentForm.resx">
+      <DependentUpon>NewShipmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\Oeders.resx">
+      <DependentUpon>Oeders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\ShipmentConfirmation.resx">
+      <DependentUpon>ShipmentConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\ShipmentsForm.resx">
+      <DependentUpon>ShipmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\SoldMedsReport.resx">
+      <DependentUpon>SoldMedsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\SupplierProfile.resx">
+      <DependentUpon>SupplierProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Suppliers\UpdateMeds.resx">
+      <DependentUpon>UpdateMeds.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="medicine_icon-icons.com_66070.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
